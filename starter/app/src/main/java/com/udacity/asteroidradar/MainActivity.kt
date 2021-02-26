@@ -1,15 +1,12 @@
 package com.udacity.asteroidradar
 
 import android.media.MediaPlayer
-import android.net.Uri
 import android.os.Bundle
-import android.widget.VideoView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.udacity.asteroidradar.databinding.ActivityMainBinding
 import com.udacity.asteroidradar.utils.AndroidUtils
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 

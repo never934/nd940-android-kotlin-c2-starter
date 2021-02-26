@@ -5,6 +5,7 @@
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
+starter/app/.cxx
 .idea
 .DS_Store
 /build
