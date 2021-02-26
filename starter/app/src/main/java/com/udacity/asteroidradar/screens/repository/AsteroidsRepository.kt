@@ -30,4 +30,8 @@ class AsteroidsRepository {
             }
         }
     }
+
+    suspend fun loadImageOfDay(){
+        
+    }
 }

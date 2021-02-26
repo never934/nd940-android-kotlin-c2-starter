@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
@@ -11,10 +12,33 @@
             type="com.udacity.asteroidradar.impl.AsteroidListener" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:orientation="vertical"
         android:onClick="@{() -> clickListener.onClick(asteroid)}">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/nameView"
+            style="@style/labelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{asteroid.codename}" />
+
+        <TextView
+            android:id="@+id/dateView"
+            style="@style/labelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{asteroid.closeApproachDate}" />
+
+        <TextView
+            android:id="@+id/isHazardousView"
+            style="@style/parametrStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{asteroid.potentiallyHazardous ? @string/hazardous : @string/hazardous_not}" />
+    </LinearLayout>
 </layout>

@@ -1,14 +1,10 @@
 package com.udacity.asteroidradar.di.module
 
-import android.app.Application
-import androidx.room.Room
-import com.udacity.asteroidradar.Constants
 import com.udacity.asteroidradar.db.AppDatabase
 import com.udacity.asteroidradar.db.AsteroidsDao
 import com.udacity.asteroidradar.di.EnvScope
 import dagger.Module
 import dagger.Provides
-import javax.inject.Singleton
 
 
 @Module
