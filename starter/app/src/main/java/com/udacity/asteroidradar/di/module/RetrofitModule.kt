@@ -1,6 +1,5 @@
 package com.udacity.asteroidradar.di.module
 
-import android.os.Build
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import com.udacity.asteroidradar.Constants
