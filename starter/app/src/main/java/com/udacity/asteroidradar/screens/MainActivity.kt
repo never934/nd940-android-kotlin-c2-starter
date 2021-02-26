@@ -1,10 +1,11 @@
-package com.udacity.asteroidradar
+package com.udacity.asteroidradar.screens
 
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.udacity.asteroidradar.R
 import com.udacity.asteroidradar.databinding.ActivityMainBinding
 import com.udacity.asteroidradar.utils.AndroidUtils
 

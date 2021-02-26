@@ -1,14 +1,14 @@
-package com.udacity.asteroidradar.main
+package com.udacity.asteroidradar.screens.list
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.udacity.asteroidradar.MainViewModel
 import com.udacity.asteroidradar.R
 import com.udacity.asteroidradar.databinding.FragmentMainBinding
+import com.udacity.asteroidradar.screens.MainViewModel
 
-class MainFragment : Fragment() {
+class AsteroidsListFragment : Fragment() {
 
     private val viewModel: MainViewModel by lazy {
         ViewModelProvider(this).get(MainViewModel::class.java)
