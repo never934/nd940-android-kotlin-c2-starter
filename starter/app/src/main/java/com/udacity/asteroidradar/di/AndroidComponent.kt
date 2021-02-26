@@ -1,5 +1,6 @@
 package com.udacity.asteroidradar.di
 
+import android.app.Application
 import android.content.Context
 import android.content.res.Resources
 import com.udacity.asteroidradar.di.module.AndroidModule
@@ -11,4 +12,5 @@ import javax.inject.Singleton
 interface AndroidComponent {
     val context: Context
     val resources: Resources
+    val application: Application
 }

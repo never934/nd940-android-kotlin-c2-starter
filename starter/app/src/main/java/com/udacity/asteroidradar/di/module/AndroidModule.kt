@@ -1,5 +1,6 @@
 package com.udacity.asteroidradar.di.module
 
+import android.app.Application
 import android.content.Context
 import android.content.res.Resources
 import dagger.Module
@@ -7,7 +8,7 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class AndroidModule(private val mContext: Context) {
+class AndroidModule(private val mContext: Context, private val application: Application) {
 
     @Provides
     @Singleton
@@ -19,5 +20,11 @@ class AndroidModule(private val mContext: Context) {
     @Singleton
     internal fun provideResources(): Resources {
         return mContext.resources
+    }
+
+    @Provides
+    @Singleton
+    internal fun provideApplication(): Application {
+        return application
     }
 }

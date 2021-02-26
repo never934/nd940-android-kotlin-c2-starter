@@ -10,4 +10,7 @@ object Constants {
     const val READ_TIMEOUT_MILLIS = 3
     const val CONTENT_TYPE = "Content-Type"
 
+    // DB
+    const val DB_NAME = "asteroids_app_db"
+
 }
