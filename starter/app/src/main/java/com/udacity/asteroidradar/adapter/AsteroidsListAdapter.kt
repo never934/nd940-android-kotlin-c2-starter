@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.udacity.asteroidradar.adapter.diff.AsteroidsListDiffCallback
 import com.udacity.asteroidradar.databinding.ItemListAsteroidBinding
 import com.udacity.asteroidradar.db.entity.AsteroidDB
 import com.udacity.asteroidradar.impl.AsteroidListener
@@ -35,16 +36,6 @@ class AsteroidsListAdapter(private val clickListener: AsteroidListener) : ListAd
                 return ViewHolder(binding)
             }
         }
-    }
-}
-
-class AsteroidsListDiffCallback : DiffUtil.ItemCallback<AsteroidDB>() {
-    override fun areItemsTheSame(oldItem: AsteroidDB, newItem: AsteroidDB): Boolean {
-        return oldItem.id == newItem.id
-    }
-
-    override fun areContentsTheSame(oldItem: AsteroidDB, newItem: AsteroidDB): Boolean {
-        return oldItem == newItem
     }
 }
 

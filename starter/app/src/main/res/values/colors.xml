@@ -9,4 +9,5 @@
     <color name="potentially_hazardous">#FF8282</color>
     <color name="alert">#F53212</color>
     <color name="accept">#2CF618</color>
+    <color name="item_background">#40000000</color>
 </resources>

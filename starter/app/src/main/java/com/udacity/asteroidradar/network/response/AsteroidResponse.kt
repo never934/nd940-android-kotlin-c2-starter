@@ -4,7 +4,6 @@ import android.os.Parcelable
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
-@Parcelize
 data class AsteroidResponse(
     val id: Long,
     val codename: String,
@@ -13,4 +12,4 @@ data class AsteroidResponse(
     val estimatedDiameter: Double,
     val relativeVelocity: Double,
     val distanceFromEarth: Double,
-    val isPotentiallyHazardous: Boolean) : Parcelable
+    val isPotentiallyHazardous: Boolean)

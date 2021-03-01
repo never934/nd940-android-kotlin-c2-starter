@@ -15,14 +15,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/small_margin"
-        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/nano_margin"
         android:orientation="vertical"
+        android:background="@color/item_background"
         android:onClick="@{() -> clickListener.onClick(asteroid)}">
 
         <TextView
             android:id="@+id/nameView"
             style="@style/labelStyle"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginStart="@dimen/normal_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{asteroid.codename}" />
@@ -30,6 +32,7 @@
         <TextView
             android:id="@+id/dateView"
             style="@style/labelStyle"
+            android:layout_marginStart="@dimen/normal_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{asteroid.closeApproachDate}" />
@@ -39,6 +42,9 @@
             style="@style/parametrStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:textColor="@{asteroid.potentiallyHazardous ? @color/alert : @color/accept}"
             android:text="@{asteroid.potentiallyHazardous ? @string/hazardous : @string/hazardous_not}" />
     </LinearLayout>
 </layout>

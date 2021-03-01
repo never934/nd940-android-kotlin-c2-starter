@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface NasaServerApi {
     @GET("planetary/apod")
-    fun loadImageOfADay(@Query("api_key") apiKey: String) : ImageOfDayResponse
+    suspend fun loadImageOfADay(@Query("api_key") apiKey: String) : ImageOfDayResponse
 
     @GET("neo/rest/v1/feed")
     suspend fun loadAsteroidsFeed(

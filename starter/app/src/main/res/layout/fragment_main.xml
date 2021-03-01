@@ -39,9 +39,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
-                        android:alpha="0.1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/placeholder_picture_of_day" />
+                        android:alpha="0.7"
+                        android:scaleType="centerCrop" />
 
                     <TextView
                         android:id="@+id/textView"

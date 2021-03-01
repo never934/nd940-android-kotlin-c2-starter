@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="alpha_dimen">0.2</dimen>
+    <dimen name="nano_margin">1dp</dimen>
+    <dimen name="micro_margin">4dp</dimen>
     <dimen name="small_margin">8dp</dimen>
     <dimen name="normal_margin">16dp</dimen>
 </resources>

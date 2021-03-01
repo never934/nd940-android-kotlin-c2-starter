@@ -7,13 +7,12 @@
 
         <variable
             name="asteroid"
-            type="com.udacity.asteroidradar.network.response.AsteroidResponse" />
+            type="com.udacity.asteroidradar.db.entity.AsteroidDB" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/app_background">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/activity_main_image_of_the_day"
@@ -21,6 +20,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             app:asteroidStatusImage="@{asteroid.potentiallyHazardous}"
+            android:alpha="0.7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
