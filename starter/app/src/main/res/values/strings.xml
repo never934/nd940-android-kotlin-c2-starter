@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Asteroid Radar</string>
 
+    <string name="common_ok">OK</string>
+    <string name="exit_dialog_title">Exit from app?</string>
     <string name="next_week_asteroids">View week asteroids</string>
     <string name="today_asteroids">View today asteroids</string>
     <string name="saved_asteroids">View saved asteroids</string>
@@ -21,4 +23,8 @@
     <string name="nasa_picture_of_day_content_description_format">NASA\'s picture of day: %s</string>
     <string name="hazardous">HAZARDOUS</string>
     <string name="hazardous_not">NOT HAZARDOUS</string>
+
+    <!-- main fragment !-->
+    <string name="main_app_bar">List</string>
+
 </resources>

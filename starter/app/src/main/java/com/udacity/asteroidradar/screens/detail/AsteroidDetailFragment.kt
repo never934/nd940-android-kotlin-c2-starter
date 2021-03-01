@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.udacity.asteroidradar.R
 import com.udacity.asteroidradar.databinding.FragmentDetailBinding
+import com.udacity.asteroidradar.screens.MainActivity
 
 class AsteroidDetailFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -17,9 +18,8 @@ class AsteroidDetailFragment : Fragment() {
         binding.lifecycleOwner = this
 
         val asteroid = AsteroidDetailFragmentArgs.fromBundle(requireArguments()).selectedAsteroid
-
+        (requireActivity() as MainActivity).supportActionBar?.title = asteroid.codename
         binding.asteroid = asteroid
-
         binding.helpButton.setOnClickListener {
             displayAstronomicalUnitExplanationDialog()
         }
