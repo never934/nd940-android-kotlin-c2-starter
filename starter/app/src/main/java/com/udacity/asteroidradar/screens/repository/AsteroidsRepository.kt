@@ -7,10 +7,7 @@ import com.udacity.asteroidradar.AppClass
 import com.udacity.asteroidradar.db.AsteroidsDao
 import com.udacity.asteroidradar.db.entity.AsteroidDB
 import com.udacity.asteroidradar.network.response.ImageOfDayResponse
-import com.udacity.asteroidradar.utils.AsteroidResponseContainer
-import com.udacity.asteroidradar.utils.NativeUtils
-import com.udacity.asteroidradar.utils.asDatabaseModel
-import com.udacity.asteroidradar.utils.parseAsteroidsJsonResult
+import com.udacity.asteroidradar.utils.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
@@ -20,7 +17,10 @@ import javax.inject.Inject
 class AsteroidsRepository {
 
     val asteroids: LiveData<List<AsteroidDB>> = AppClass.roomComponent.asteroidsDao.getAsteroids()
-    val imageOfDay: MutableLiveData<ImageOfDayResponse> = MutableLiveData()
+
+    private val _imageOfDay: MutableLiveData<ImageOfDayResponse> = MutableLiveData()
+    val imageOfDay: LiveData<ImageOfDayResponse>
+    get() = _imageOfDay
 
     suspend fun loadAsteroids(){
         withContext(Dispatchers.IO){
@@ -37,7 +37,7 @@ class AsteroidsRepository {
     suspend fun loadImageOfDay(){
         withContext(Dispatchers.IO){
             try {
-                imageOfDay.postValue(AppClass.nasaServerComponent.nasaServerApi.loadImageOfADay(NativeUtils().getNasaDecodedKey()))
+                _imageOfDay.postValue(AppClass.nasaServerComponent.nasaServerApi.loadImageOfADay(NativeUtils().getNasaDecodedKey()))
             }catch (e: Exception){
                 Log.e("internet", "lost connection")
             }

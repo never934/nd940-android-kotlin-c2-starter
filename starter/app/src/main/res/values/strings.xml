@@ -29,4 +29,12 @@
     <string name="volume">volume</string>
     <string name="info">Info</string>
 
+
+    <!-- info fragment !-->
+    <string name="info_app_bar">Info</string>
+    <string name="music_hint">Music</string>
+    <string name="background_hint">Background</string>
+    <string name="music_link">https://soundcloud.com/ccpgames/eve-online-but-still-we-go-on</string>
+    <string name="background_link">https://pa1.narvii.com/7239/f325bd0471d66cab8af9af46718cb8769d4718ebr1–500–500_hq.gif</string>
+
 </resources>

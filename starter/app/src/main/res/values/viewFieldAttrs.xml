@@ -2,6 +2,5 @@
 <resources>
     <declare-styleable name="ViewField">
         <attr format="string" name="hint"/>
-        <attr format="string" name="field_content"/>
     </declare-styleable>
 </resources>

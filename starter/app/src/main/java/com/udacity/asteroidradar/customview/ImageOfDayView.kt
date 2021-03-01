@@ -3,14 +3,9 @@ package com.udacity.asteroidradar.customview
 import android.content.Context
 import android.net.Uri
 import android.util.AttributeSet
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import androidx.databinding.DataBindingUtil
-import androidx.transition.Fade
-import androidx.transition.Slide
-import androidx.transition.Transition
-import androidx.transition.TransitionManager
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import com.udacity.asteroidradar.R

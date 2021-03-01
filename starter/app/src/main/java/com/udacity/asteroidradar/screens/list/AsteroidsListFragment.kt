@@ -1,16 +1,12 @@
 package com.udacity.asteroidradar.screens.list
 
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.squareup.picasso.Picasso
 import com.udacity.asteroidradar.R
 import com.udacity.asteroidradar.adapter.AsteroidsListAdapter
 import com.udacity.asteroidradar.databinding.FragmentMainBinding
@@ -63,7 +59,11 @@ class AsteroidsListFragment : Fragment() {
                     mainViewModel.unmuteMusic()
                 }
             }
+            R.id.infoFragment -> {
+                findNavController().navigate(AsteroidsListFragmentDirections.actionMainFragmentToInfoFragment())
+            }
         }
-        return true
+        viewModel.filter(item.itemId)
+        return false
     }
 }

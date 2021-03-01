@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.asteroidradar.screens.info.InfoViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <com.udacity.asteroidradar.customview.ViewField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.openMusicUrl()}"
+            app:hint="@string/music_hint"
+            app:content="@{viewModel.musicUrl}"/>
+        <com.udacity.asteroidradar.customview.ViewField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.openBackgroundUrl()}"
+            app:hint="@string/background_hint"
+            app:content="@{viewModel.backgroundUrl}"/>
+    </LinearLayout>
+</layout>

@@ -16,6 +16,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_mainFragment_to_infoFragment"
+            app:destination="@id/infoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -28,5 +35,9 @@
             android:name="selectedAsteroid"
             app:argType="com.udacity.asteroidradar.db.entity.AsteroidDB"/>
     </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.udacity.asteroidradar.screens.info.InfoFragment"
+        android:label="@string/info_app_bar" />
 
 </navigation>
