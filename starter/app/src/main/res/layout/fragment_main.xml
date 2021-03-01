@@ -6,7 +6,6 @@
         <variable
             name="viewModel"
             type="com.udacity.asteroidradar.screens.list.AsteroidsListViewModel" />
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,34 +25,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <FrameLayout
-                    android:id="@+id/activity_main_image_of_the_day_layout"
+                <com.udacity.asteroidradar.customview.ImageOfDayView
                     android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:id="@+id/activity_main_image_of_the_day"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:adjustViewBounds="true"
-                        android:alpha="0.7"
-                        android:scaleType="centerCrop" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:background="#55010613"
-                        android:padding="16dp"
-                        android:text="@string/image_of_the_day"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-                </FrameLayout>
+                    android:layout_height="wrap_content"
+                    app:responseImage="@{viewModel.imageOfDay}"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/asteroid_recycler"

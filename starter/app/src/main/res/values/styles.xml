@@ -8,14 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="labelStyle">
+    <style name="headlineStyle">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/big_size</item>
     </style>
 
-    <style name="parametrStyle" parent="labelStyle">
+    <style name="parameterStyle">
+        <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/medium_size</item>
     </style>
 
 </resources>

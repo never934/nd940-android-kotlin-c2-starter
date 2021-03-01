@@ -26,5 +26,7 @@
 
     <!-- main fragment !-->
     <string name="main_app_bar">List</string>
+    <string name="volume">volume</string>
+    <string name="info">Info</string>
 
 </resources>

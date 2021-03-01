@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/nameView"
-            style="@style/labelStyle"
+            style="@style/headlineStyle"
             android:layout_marginTop="@dimen/small_margin"
             android:layout_marginStart="@dimen/normal_margin"
             android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/dateView"
-            style="@style/labelStyle"
+            style="@style/headlineStyle"
             android:layout_marginStart="@dimen/normal_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
 
         <TextView
             android:id="@+id/isHazardousView"
-            style="@style/parametrStyle"
+            style="@style/parameterStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/normal_margin"
