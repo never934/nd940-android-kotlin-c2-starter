@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.udacity.asteroidradar.AppClass
 import com.udacity.asteroidradar.db.AsteroidsDao
 import com.udacity.asteroidradar.db.entity.AsteroidDB
+import com.udacity.asteroidradar.enums.ResponseStatus
 import com.udacity.asteroidradar.network.response.ImageOfDayResponse
 import com.udacity.asteroidradar.utils.*
 import kotlinx.coroutines.Dispatchers
@@ -22,14 +23,20 @@ class AsteroidsRepository {
     val imageOfDay: LiveData<ImageOfDayResponse>
     get() = _imageOfDay
 
+    private val _responseStatus: MutableLiveData<ResponseStatus> = MutableLiveData()
+    val responseStatus: LiveData<ResponseStatus>
+    get() = _responseStatus
+
     suspend fun loadAsteroids(){
         withContext(Dispatchers.IO){
             try {
+                _responseStatus.postValue(ResponseStatus.loading)
                 val asteroidsResponse = AppClass.nasaServerComponent.nasaServerApi.loadAsteroidsFeed(NativeUtils().getNasaDecodedKey(), null, null)
                 val asteroidsList = parseAsteroidsJsonResult(JSONObject(asteroidsResponse.string()))
                 AppClass.roomComponent.asteroidsDao.insertAll(AsteroidResponseContainer(asteroidsList).asDatabaseModel())
+                _responseStatus.postValue(ResponseStatus.done)
             }catch (e: Exception){
-                Log.e("internet", "lost connection")
+                _responseStatus.postValue(ResponseStatus.error)
             }
         }
     }
@@ -39,7 +46,7 @@ class AsteroidsRepository {
             try {
                 _imageOfDay.postValue(AppClass.nasaServerComponent.nasaServerApi.loadImageOfADay(NativeUtils().getNasaDecodedKey()))
             }catch (e: Exception){
-                Log.e("internet", "lost connection")
+
             }
         }
     }

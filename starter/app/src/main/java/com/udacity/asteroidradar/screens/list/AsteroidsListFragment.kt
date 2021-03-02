@@ -2,6 +2,7 @@ package com.udacity.asteroidradar.screens.list
 
 import android.os.Bundle
 import android.view.*
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -10,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.udacity.asteroidradar.R
 import com.udacity.asteroidradar.adapter.AsteroidsListAdapter
 import com.udacity.asteroidradar.databinding.FragmentMainBinding
+import com.udacity.asteroidradar.enums.ResponseStatus
 import com.udacity.asteroidradar.impl.AsteroidListener
 import com.udacity.asteroidradar.screens.MainViewModel
 import com.udacity.asteroidradar.utils.SharedPreferencesUtils
@@ -31,8 +33,21 @@ class AsteroidsListFragment : Fragment() {
             findNavController().navigate(AsteroidsListFragmentDirections.actionShowDetail(it))
         })
         binding.asteroidRecycler.adapter = listAdapter
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            viewModel.update()
+            binding.swipeRefreshLayout.isRefreshing = true
+        }
         viewModel.asteroids.observe(viewLifecycleOwner, Observer {
             listAdapter.submitList(it)
+            binding.swipeRefreshLayout.isRefreshing = false
+        })
+        viewModel.responseStatus.observe(viewLifecycleOwner, Observer {
+            when(it){
+                ResponseStatus.loading -> binding.statusLoadingWheel.isVisible = true
+                ResponseStatus.error -> binding.statusLoadingWheel.isVisible = false
+                ResponseStatus.done -> binding.statusLoadingWheel.isVisible = false
+                else -> binding.statusLoadingWheel.isVisible = false
+            }
         })
         return binding.root
     }
