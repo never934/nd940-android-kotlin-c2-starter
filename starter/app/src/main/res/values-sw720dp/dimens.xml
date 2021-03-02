@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_of_day_size">440dp</dimen>
+    <dimen name="nano_margin">1.5625dp</dimen>
+    <dimen name="micro_margin">6.25dp</dimen>
+    <dimen name="small_margin">12.5dp</dimen>
+    <dimen name="normal_margin">25dp</dimen>
+    <dimen name="big_size">28.125sp</dimen>
+    <dimen name="medium_size">21.875sp</dimen>
+    <dimen name="small_size">18.75sp</dimen>
+</resources>

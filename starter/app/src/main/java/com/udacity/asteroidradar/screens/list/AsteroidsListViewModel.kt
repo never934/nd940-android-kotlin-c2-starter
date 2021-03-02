@@ -36,7 +36,6 @@ class AsteroidsListViewModel : ViewModel() {
     val responseStatus: LiveData<ResponseStatus> = repository.responseStatus
     private val chosenSortButton: MutableLiveData<Int> = MutableLiveData(R.id.show_saved)
 
-
     init{
         update()
     }
