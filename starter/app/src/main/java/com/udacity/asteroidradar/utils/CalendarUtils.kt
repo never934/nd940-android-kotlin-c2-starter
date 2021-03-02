@@ -24,8 +24,15 @@ class CalendarUtils {
                 formattedDateList.add(dateFormat.format(currentTime))
                 calendar.add(Calendar.DAY_OF_YEAR, 1)
             }
-
             return formattedDateList
+        }
+
+        fun getYesterdayFormatted() : String{
+            val calendar = Calendar.getInstance()
+            calendar.add(Calendar.DAY_OF_YEAR, -1)
+            val currentTime = calendar.time
+            val dateFormat = SimpleDateFormat(Constants.API_QUERY_DATE_FORMAT, Locale.getDefault())
+            return dateFormat.format(currentTime)
         }
     }
 }

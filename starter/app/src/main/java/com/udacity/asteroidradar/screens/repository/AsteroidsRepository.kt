@@ -1,10 +1,8 @@
 package com.udacity.asteroidradar.screens.repository
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.udacity.asteroidradar.AppClass
-import com.udacity.asteroidradar.db.AsteroidsDao
 import com.udacity.asteroidradar.db.entity.AsteroidDB
 import com.udacity.asteroidradar.enums.ResponseStatus
 import com.udacity.asteroidradar.network.response.ImageOfDayResponse
@@ -13,7 +11,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
 import java.lang.Exception
-import javax.inject.Inject
 
 class AsteroidsRepository {
 
@@ -47,6 +44,19 @@ class AsteroidsRepository {
                 _imageOfDay.postValue(AppClass.nasaServerComponent.nasaServerApi.loadImageOfADay(NativeUtils().getNasaDecodedKey()))
             }catch (e: Exception){
 
+            }
+        }
+    }
+
+    suspend fun deleteYesterdayAsteroids(){
+        withContext(Dispatchers.IO){
+            val asteroids = AppClass.roomComponent.asteroidsDao.getAsteroids().value
+            asteroids?.let {
+                AppClass.roomComponent.asteroidsDao.deleteAsteroids(
+                        asteroids.filter {
+                            it.closeApproachDate == CalendarUtils.getYesterdayFormatted()
+                        }
+                )
             }
         }
     }
