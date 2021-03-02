@@ -1,9 +1,7 @@
 package com.udacity.asteroidradar.adapter
 
-import android.net.Uri
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.squareup.picasso.Picasso
 import com.udacity.asteroidradar.Constants
 import com.udacity.asteroidradar.R
 import com.udacity.asteroidradar.customview.ImageOfDayView

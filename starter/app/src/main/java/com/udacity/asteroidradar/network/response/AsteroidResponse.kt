@@ -1,9 +1,5 @@
 package com.udacity.asteroidradar.network.response
 
-import android.os.Parcelable
-import androidx.room.PrimaryKey
-import kotlinx.android.parcel.Parcelize
-
 data class AsteroidResponse(
     val id: Long,
     val codename: String,
