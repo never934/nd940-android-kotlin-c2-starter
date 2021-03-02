@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Radar astéroïde</string>
+    <string name="connection_error">Erreur de connexion</string>
+
+    <!-- main fragment !-->
+    <string name="main_app_bar">Liste</string>
+    <string name="volume">Volume</string>
+    <string name="info">Infos</string>
+    <string name="hazardous">DANGEREUX</string>
+    <string name="hazardous_not">PAS DANGEREUX</string>
+    <string name="next_week_asteroids">Afficher les astéroïdes de la semaine</string>
+    <string name="today_asteroids">Afficher les astéroïdes du jour</string>
+    <string name="saved_asteroids">Afficher les astéroïdes enregistrés</string>
+    <string name="nasa_picture_of_day_content_description_format">Image du jour de la NASA: %s</string>
+
+    <!-- detail fragment !-->
+    <string name="close_approach_data_title">Date d approche de fermeture</string>
+    <string name="absolute_magnitude_title">Magnitude absolue</string>
+    <string name="estimated_diameter_title">Diamètre estimé</string>
+    <string name="relative_velocity_title">Vitesse relative</string>
+    <string name="distance_from_earth_title">Distance de la terre</string>
+    <string name="astronomical_unit_format">%f au</string>
+    <string name="km_unit_format">%f km</string>
+    <string name="km_s_unit_format">%f km/s</string>
+    <string name="potentially_hazardous_asteroid_image">Image d astéroïde potentiellement dangereuse</string>
+    <string name="not_hazardous_asteroid_image">Image d astéroïde non dangereuse</string>
+
+
+    <!-- exit dialog !-->
+    <string name="common_ok">OK</string>
+    <string name="exit_dialog_title">Quitter l application?</string>
+
+    <!-- info fragment !-->
+    <string name="info_app_bar">Infos</string>
+    <string name="music_hint">Musique</string>
+    <string name="background_hint">Arrière-plan</string>
+    <string name="music_link">https://soundcloud.com/ccpgames/eve-online-but-still-we-go-on</string>
+    <string name="background_link">https://pa1.narvii.com/7239/f325bd0471d66cab8af9af46718cb8769d4718ebr1–500–500_hq.gif</string>
+
+</resources>

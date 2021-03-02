@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Radar asteroidů</string>
+    <string name="connection_error">Chyba připojení</string>
+
+    <!-- main fragment !-->
+    <string name="main_app_bar">Seznam</string>
+    <string name="volume">Hlasitost</string>
+    <string name="info">Info</string>
+    <string name="hazardous">NEBEZPEČNÝ</string>
+    <string name="hazardous_not">NENÍ NEBEZPEČNÉ</string>
+    <string name="next_week_asteroids">Zobrazit týdenní asteroidy</string>
+    <string name="today_asteroids">Zobrazit dnešní asteroidy</string>
+    <string name="saved_asteroids">Zobrazit uložené asteroidy</string>
+    <string name="nasa_picture_of_day_content_description_format">Obrázek dne NASA: %s</string>
+
+    <!-- detail fragment !-->
+    <string name="close_approach_data_title">Blízké datum přiblížení</string>
+    <string name="absolute_magnitude_title">Absolutní velikost</string>
+    <string name="estimated_diameter_title">Odhadovaný průměr</string>
+    <string name="relative_velocity_title">Relativní rychlost</string>
+    <string name="distance_from_earth_title">Vzdálenost od Země</string>
+    <string name="astronomical_unit_format">%f au</string>
+    <string name="km_unit_format">%f km</string>
+    <string name="km_s_unit_format">%f km/s</string>
+    <string name="potentially_hazardous_asteroid_image">Potenciálně nebezpečný obraz asteroidu</string>
+    <string name="not_hazardous_asteroid_image">Obrázek nebezpečného asteroidu není nebezpečný</string>
+
+
+    <!-- exit dialog !-->
+    <string name="common_ok">OK</string>
+    <string name="exit_dialog_title">Ukončit aplikaci?</string>
+
+    <!-- info fragment !-->
+    <string name="info_app_bar">Info</string>
+    <string name="music_hint">Hudba</string>
+    <string name="background_hint">Pozadí</string>
+    <string name="music_link">https://soundcloud.com/ccpgames/eve-online-but-still-we-go-on</string>
+    <string name="background_link">https://pa1.narvii.com/7239/f325bd0471d66cab8af9af46718cb8769d4718ebr1–500–500_hq.gif</string>
+
+</resources>
