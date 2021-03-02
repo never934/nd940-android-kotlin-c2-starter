@@ -34,5 +34,12 @@ class CalendarUtils {
             val dateFormat = SimpleDateFormat(Constants.API_QUERY_DATE_FORMAT, Locale.getDefault())
             return dateFormat.format(currentTime)
         }
+
+        fun getViewDate(currentDate: String): String{
+            val formatInput = SimpleDateFormat(Constants.API_QUERY_DATE_FORMAT, Locale.getDefault())
+            val formatView = SimpleDateFormat(Constants.VIEW_DATE_FORMAT, Locale.getDefault())
+            val date = formatInput.parse(currentDate)
+            return formatView.format(date)
+        }
     }
 }
