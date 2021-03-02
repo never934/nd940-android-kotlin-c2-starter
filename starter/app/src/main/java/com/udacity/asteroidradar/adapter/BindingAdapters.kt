@@ -4,6 +4,7 @@ import android.net.Uri
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.squareup.picasso.Picasso
+import com.udacity.asteroidradar.Constants
 import com.udacity.asteroidradar.R
 import com.udacity.asteroidradar.customview.ImageOfDayView
 import com.udacity.asteroidradar.customview.ViewField
@@ -21,7 +22,9 @@ fun bindDetailsStatusImage(imageView: ImageView, isHazardous: Boolean) {
 @BindingAdapter("responseImage")
 fun bindUrlImage(view: ImageOfDayView, response: ImageOfDayResponse?) {
     response?.let {
-        view.setContent(it)
+        if (response.mediaType == Constants.NASA_IMAGE_OF_DAY_TYPE) {
+            view.setContent(it)
+        }
     }
 }
 

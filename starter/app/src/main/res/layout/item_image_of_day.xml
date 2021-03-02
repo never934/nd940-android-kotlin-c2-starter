@@ -21,6 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
+            android:focusable="true"
+            android:contentDescription="@{@string/nasa_picture_of_day_content_description_format(imageResponse.title)}"
             android:alpha="0.9"
             android:scaleType="centerCrop" />
 
