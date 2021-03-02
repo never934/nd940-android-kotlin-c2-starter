@@ -1,17 +1,14 @@
-*.iml
 .gradle
 /local.properties
-/.idea/caches/build_file_checksum.ser
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-starter/app/.cxx
-.idea
 .DS_Store
 /build
 /captures
 .externalNativeBuild
-
-
-# gradle
+.cxx
+app/release/app-release.apk
+*.iml
+.idea/
+*.aab
+*.apk
+app/release/output-metadata.json
 starter/local.properties
